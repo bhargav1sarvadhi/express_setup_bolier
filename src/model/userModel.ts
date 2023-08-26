@@ -42,7 +42,7 @@ export const userModel = sequelize.define<User>('users', {
         values: [ 'admin', 'user' ]
     }
 });
-userModel.beforeSave(data => {
+userModel.afterValidate(data => {
     if (data.changed('password')) {
         data.password = hashSync(data.password, genSaltSync(12));
     }

@@ -19,7 +19,13 @@ export enum RES_TYPES {
     UNIQUE_DATE = 'You already assign for different task at this time',
     SOMETHING_WRONG = 'Something went wrong !!! You try to insert single in bulk.',
     ACTIVE_YOUR_ACCOUNT = 'First You have to active your account after you can access this route',
-    INTIALROUTES_SUBCLASSES ='Subclasses must implement initializeRoutes method.'
+    INTIALROUTES_SUBCLASSES = 'Subclasses must implement initializeRoutes method.',
+    USER_NOT_FOUND = 'User not found',
+    OTP = 'Sucessfully Send OTP',
+  NOT_VALIDATE_OTP = 'Invalid OTP Please Check',
+  VALIDATE_OTP = 'sucessfully verify OTP'
+  
+    
 }
 
 export const enum ROLES {

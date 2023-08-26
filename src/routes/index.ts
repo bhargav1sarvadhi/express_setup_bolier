@@ -22,7 +22,7 @@ class MainRouter {
 
     setupRoutes() {
         this.router.use(END_POINTS.AUTH,authRoutes)
-        this.router.use(END_POINTS.USER,passport.authenticate('jwt',{session:false}),checkPermission([ROLES.USER]),userRoutes)
+        this.router.use(END_POINTS.USER,passport.authenticate('jwt',{session:false}),checkPermission([ROLES.ADMIN]),userRoutes)
         this.router.all(END_POINTS.ALL, (req, res, next) => this.invalidedRouter.handleRequest(req, res, next));
     }
 }

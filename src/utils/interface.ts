@@ -11,7 +11,14 @@ interface User extends Model{
     role: 'admin' | 'user';
     authenticate(password: string): boolean | string;
 }
+interface Otp extends Model{
+    id: string;
+    otp: number,
+    expiresIn:number;
+    userId: string 
+}
 
 export {
-    User
+    User,
+    Otp
 };
